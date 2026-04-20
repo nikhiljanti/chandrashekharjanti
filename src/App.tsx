@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { AnimatedBackground } from './components/AnimatedBackground';
 import { Splash } from './components/Splash';
 import resumeData from './data/resume.json';
@@ -91,15 +91,13 @@ export default function App() {
         ? 'bg-slate-950 text-slate-200 selection:bg-sky-500/30'
         : 'bg-white text-slate-900 selection:bg-sky-500/50'
     }`}>
-      <AnimatePresence>
-        {showSplash && <Splash onComplete={() => setShowSplash(false)} />}
-      </AnimatePresence>
+      {showSplash && <Splash onComplete={() => setShowSplash(false)} />}
 
       {!showSplash && (
         <div
           className="min-h-screen"
         >
-          <AnimatedBackground isDarkMode={isDarkMode} />
+          {/* <AnimatedBackground isDarkMode={isDarkMode} /> */}
 
           {/* Navigation */}
           <nav className={`fixed top-0 left-0 right-0 z-40 border-b backdrop-blur-md transition-colors ${
