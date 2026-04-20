@@ -1,0 +1,48 @@
+{
+  "name": "Chandrashekhar Janti",
+  "title": "Certified DevOps Engineer",
+  "summary": "Certified DevOps Engineer with 4.4+ years of hands-on experience in creating, automating, deploying services, and managing applications and infrastructure in cloud environments.",
+  "skills": [
+    "AWS",
+    "Microsoft Azure",
+    "Terraform",
+    "Docker",
+    "Kubernetes",
+    "HELM",
+    "Istio",
+    "Git / GitHub / JFrog",
+    "Jenkins / ArgoCD / GitHub Actions",
+    "Bash",
+    "Python (Automation)",
+    "OpenSearch",
+    "Instana",
+    "Datadog",
+    "Grafana"
+  ],
+  "experience": [
+    {
+      "company": "Daimler Truck Innovation Center (Mercedes-Benz Trucks)",
+      "location": "Bangalore, KA",
+      "roles": [
+        {
+          "title": "Senior Infrastructure/DevSecOps Engineer",
+          "period": "July 2022 - Present",
+          "details": [
+            "Designed and automated build/configuration tools (Maven, Gradle, Ansible).",
+            "Implemented CI/CD pipelines with Jenkins and GitHub Actions.",
+            "Built AWS and Azure infrastructures from scratch.",
+            "Configured service mesh architectures with Istio.",
+            "Executed migrations from on-prem to cloud platforms."
+          ]
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    "Microsoft Azure Fundamentals (AZ-900)",
+    "AWS Cloud Practitioner 2 (AWS CLF-02)",
+    "Udemy Certified Kubernetes Administrator Developer",
+    "Edureka Certified DevOps Engineer"
+  ],
+  "education": "Bachelor of Engineering in Computer Science (2017-2021), Visvesvaraya Technological University"
+}
