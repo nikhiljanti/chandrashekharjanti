@@ -28,10 +28,10 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      # - name: Workaround npm optional dependency bug
-      #   run: |
-      #     rm -f package-lock.json
-      #     rm -rf node_modules
+      - name: Workaround npm optional dependency bug
+        run: |
+          rm -f package-lock.json
+          rm -rf node_modules
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
