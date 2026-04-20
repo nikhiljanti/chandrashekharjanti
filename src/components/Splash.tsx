@@ -41,5 +41,3 @@ export const Splash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
     </div>
   );
 };
-  );
-};
