@@ -3,94 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { AnimatedBackground } from './components/AnimatedBackground';
+import React, { useState } from 'react';
 import { Splash } from './components/Splash';
-import resumeData from './data/resume.json';
-import { 
-  Briefcase, 
-  GraduationCap, 
-  Award, 
-  Terminal, 
-  ChevronDown, 
-  ExternalLink, 
-  Download, 
-  Mail, 
-  MapPin, 
-  Github, 
-  Linkedin, 
-  Globe,
-  Moon,
-  Sun,
-  Code,
-  Menu,
-  X
-} from 'lucide-react';
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
-  const [activeSection, setActiveSection] = useState('hero');
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [profileImageError, setProfileImageError] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    const saved = localStorage.getItem('darkMode');
-    return saved !== null ? JSON.parse(saved) : true; // default to dark mode
-  });
-
-  // Save dark mode preference to localStorage
-  useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
-  }, [isDarkMode]);
-
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      const originalOverflow = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
-      return () => {
-        document.body.style.overflow = originalOverflow;
-      };
-    }
-  }, [isMobileMenuOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['hero', 'experience', 'education', 'achievements', 'skills', 'projects', 'stackoverflow', 'connect'];
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element && element.offsetTop <= scrollPosition && (element.offsetTop + element.offsetHeight) > scrollPosition) {
-          setActiveSection(section);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
-  const publications = resumeData.extra.find(
-    (extra) => extra.type.toLowerCase() === 'publications'
-  );
-  const supplementalExtras = resumeData.extra.filter(
-    (extra) => extra.type.toLowerCase() !== 'publications'
-  );
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-300 ${
-      isDarkMode
-        ? 'bg-slate-950 text-slate-200 selection:bg-sky-500/30'
-        : 'bg-white text-slate-900 selection:bg-sky-500/50'
-    }`}>
+    <div className="min-h-screen bg-slate-950 text-slate-200">
       {showSplash && <Splash onComplete={() => setShowSplash(false)} />}
 
       {!showSplash && (
@@ -98,32 +18,9 @@ export default function App() {
           <h1 className="text-4xl font-bold">Hello World - Site is working!</h1>
         </div>
       )}
-
     </div>
   );
 }
-                </motion.div>
-
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.8 }}
-                  className={`text-4xl md:text-6xl font-black tracking-tighter leading-none ${
-                    isDarkMode ? 'text-white' : 'text-slate-900'
-                  }`}
-                >
-                  {resumeData.basics.name}
-                </motion.h1>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
-                >
-                  <h2 className="text-xl md:text-2xl font-bold italic max-w-3xl leading-tight bg-gradient-to-r from-sky-500 to-indigo-500 bg-clip-text text-transparent">
-                    {resumeData.basics.title}
-                  </h2>
-                </motion.div>
 
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
