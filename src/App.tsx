@@ -98,11 +98,19 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Right Column - Profile Photo Placeholder */}
+                {/* Right Column - Profile Photo */}
                 <div className="lg:col-span-5">
                   <div className="relative">
-                    <div className="w-80 h-80 mx-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center">
-                      <span className="text-6xl font-bold text-slate-400">CJ</span>
+                    <div className="w-80 h-80 mx-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden shadow-2xl">
+                      <img
+                        src="/images/profile.jpg"
+                        alt="Chandrashekhar Janti"
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center"><span class="text-6xl font-bold text-slate-400">CJ</span></div>';
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
