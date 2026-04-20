@@ -36,7 +36,7 @@ export const Splash: React.FC<{ onComplete: () => void }> = ({ onComplete }) => 
           transition={{ duration: 0.5 }}
           className="mb-8 flex h-24 w-24 items-center justify-center rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md"
         >
-          <span className="text-4xl font-bold tracking-tighter">DM</span>
+          <span className="text-4xl font-bold tracking-tighter">CJ</span>
         </motion.div>
         
         <div className="w-64 h-1 bg-white/10 rounded-full overflow-hidden">

@@ -96,10 +96,8 @@ export default function App() {
       </AnimatePresence>
 
       {!showSplash && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <div
+          className="min-h-screen"
         >
           <AnimatedBackground isDarkMode={isDarkMode} />
 
@@ -110,7 +108,7 @@ export default function App() {
               : 'border-slate-200 bg-white/80'
           }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-              <div className={`text-xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>DM</div>
+              <div className={`text-xl font-bold tracking-tighter ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>CJ</div>
               <div className={`hidden md:flex space-x-8 text-sm font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
                 {['Experience', 'Education', 'Achievements', 'Skills', 'Projects', 'Stack Overflow', 'Connect'].map((item) => (
                   <button
@@ -373,7 +371,7 @@ export default function App() {
                         }`}>
                           <div className={`text-6xl font-black ${
                             isDarkMode ? 'text-slate-400' : 'text-slate-600'
-                          }`}>DM</div>
+                          }`}>CJ</div>
                         </div>
                       ) : (
                         <img
@@ -1162,7 +1160,7 @@ export default function App() {
               </p>
             </div>
           </footer>
-        </motion.div>
+        </div>
       )}
     </div>
   );
