@@ -1,7 +1,21 @@
 {
-  "name": "Chandrashekhar Janti",
-  "title": "Certified DevOps Engineer",
-  "summary": "Certified DevOps Engineer with 4.4+ years of hands-on experience in creating, automating, deploying services, and managing applications and infrastructure in cloud environments.",
+  "basics": {
+    "name": "Chandrashekhar Janti",
+    "title": "Certified DevOps Engineer",
+    "email": "chandrashekhar.janti@example.com",
+    "location": "Bangalore, KA",
+    "summary": "Certified DevOps Engineer with 4.4+ years of hands-on experience in creating, automating, deploying services, and managing applications and infrastructure in cloud environments.",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/chandrashekharjanti"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://linkedin.com/in/chandrashekharjanti"
+      }
+    ]
+  },
   "skills": [
     "AWS",
     "Microsoft Azure",
@@ -44,5 +58,6 @@
     "Udemy Certified Kubernetes Administrator Developer",
     "Edureka Certified DevOps Engineer"
   ],
-  "education": "Bachelor of Engineering in Computer Science (2017-2021), Visvesvaraya Technological University"
+  "education": "Bachelor of Engineering in Computer Science (2017-2021), Visvesvaraya Technological University",
+  "extra": []
 }
